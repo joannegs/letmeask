@@ -6,8 +6,10 @@ import Logo from "../assets/images/Logo.svg";
 import '../styles/auth.scss';
 
 import { Button } from "../components/Button";
+import { AuthContext } from '../contexts/AuthContext';
 
 export function NewRoom() {
+
   return (
     <div id="page-auth">
       <aside>
