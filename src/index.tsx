@@ -4,6 +4,7 @@ import App from './App';
 
 import './services/firebase';
 import './styles/global.scss';
+import { NewRoom } from './pages/NewRoom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
