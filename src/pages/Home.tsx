@@ -4,13 +4,15 @@ import Illustration from "../assets/images/Illustration.svg";
 import Logo from "../assets/images/Logo.svg";
 import GoogleIcon from "../assets/images/Google-icon.svg";
 
-
-import '../styles/auth.scss';
+import "../styles/auth.scss";
 import { Button } from "../components/Button";
 
 export function Home() {
+  const navigate = useNavigate();
 
-  const history = useNavigate();
+  const handleNavigate = () => {
+    navigate("/rooms/new");
+  };
 
   return (
     <div id="page-auth">
@@ -23,7 +25,7 @@ export function Home() {
       <main>
         <div className="main-content">
           <img src={Logo} alt="Imagem da logo - letmeask" />
-          <button className="create-room">
+          <button  onClick={handleNavigate} className="create-room">
             <img src={GoogleIcon} alt="Icon do Google" />
             Crie sua sala com o Google
           </button>
@@ -34,7 +36,6 @@ export function Home() {
             <input type="text" placeholder="Digite o código da sala" />
             <Button type="submit"> Entrar na sala </Button>
           </form>
-          
         </div>
       </main>
     </div>
